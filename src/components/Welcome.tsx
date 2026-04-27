@@ -22,6 +22,7 @@ const Welcome = () => {
         key={index}
         className={className}
         style={{ fontVariationSettings: `'wght' ${baseWeight}` }}
+        aria-hidden="true"
       >
         {char === " " ? "\u00A0" : char}
       </span>
@@ -88,17 +89,17 @@ const Welcome = () => {
 
   return (
     <section id="welcome">
-      <p ref={subTitleRef}>
+      <p ref={subTitleRef} aria-label="Hey, I'm Shyam. Welcome to my">
         {renderText(
           "Hey, I'm Shyam. Welcome to my",
           "text-3xl font-georama",
           100,
         )}
       </p>
-      <h1 ref={titleRef} className="mt-7">
+      <h1 ref={titleRef} className="mt-7" aria-label="portfolio.">
         {renderText("portfolio.", "text-9xl italic font-georama")}
       </h1>
-    </section>
+    </section>  
   );
 };
 

@@ -1,5 +1,6 @@
-import { formatter, navIcons, navLinks } from "#constants";
 import { useEffect, useState } from "react";
+import { formatter, navIcons, navLinks } from "#/constants";
+
 const Navbar = () => {
   const [time, setTime] = useState(new Date());
 
@@ -10,7 +11,7 @@ const Navbar = () => {
 
     return () => clearInterval(interval);
   }, []);
-  
+
   return (
     <nav>
       <div>
